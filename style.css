@@ -217,6 +217,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
+  .navigation .nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+
   .header-content .profile {
     width: 280px;
     height: 280px;
