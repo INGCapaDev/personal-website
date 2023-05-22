@@ -114,4 +114,49 @@ html {
   background-color: #2b2a2a;
   border-radius: 50%;
   text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.navigation .nav a:hover i {
+  background-color: #6462d6;
+  color: var(--secondary-color);
+}
+
+.header-content .button {
+  position: relative;
+  width: 240px;
+  min-height: 45px;
+  line-height: 45px;
+  overflow: hidden;
+  border: 1px solid #6462d6;
+  border-radius: 35px;
+  margin: 2.5rem;
+  color: var(--secondary-color);
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.button .text {
+  font-size: 1.125rem;
+}
+
+.button .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 47px;
+  width: 47px;
+  border-radius: 35px;
+  background-color: #6462d6;
+  color: #fff;
+  font-size: 1.1875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.button:hover .icon {
+  width: 100%;
 }
