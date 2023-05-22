@@ -3,6 +3,11 @@
   --secondary-color: #f2f2f2;
 }
 
+.light-theme {
+  --primary-color: #d5d5d5;
+  --secondary-color: #222;
+}
+
 * {
   padding: 0;
   margin: 0;
