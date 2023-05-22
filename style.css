@@ -85,7 +85,11 @@ body::-webkit-scrollbar-thumb {
   padding: 2rem 3.5rem;
   margin: 1.2rem;
   color: var(--secondary-color);
-  width: 80%;
+  width: 100%;
+}
+
+.header-content .text-content p {
+  text-align: justify;
 }
 
 .header-content .text-content h1 {
