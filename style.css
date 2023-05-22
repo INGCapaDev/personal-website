@@ -18,4 +18,31 @@ html {
 .hero-header {
   min-height: 100vh;
   background-color: var(--primary-color);
+  font-family: poppins, sans-serif;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header-content .profile {
+  height: 34rem;
+  width: 40rem;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 7px 5px 28px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
