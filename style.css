@@ -1,6 +1,6 @@
 :root {
   --primary-color: #111;
-  --secondary-color: #d2d2d2;
+  --secondary-color: #f2f2f2;
 }
 
 * {
@@ -8,6 +8,7 @@
   margin: 0;
   box-sizing: inherit;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 body,
@@ -18,12 +19,24 @@ html {
 .hero-header {
   min-height: 100vh;
   background-color: var(--primary-color);
-  font-family: poppins, sans-serif;
 }
 
 .container {
   width: 95%;
   margin: 0 auto;
+}
+
+.toggle {
+  position: fixed;
+  right: 4%;
+  top: 5%;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  background-color: #2b2a2a;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .header-content {
@@ -34,8 +47,8 @@ html {
 }
 
 .header-content .profile {
-  height: 34rem;
-  width: 40rem;
+  height: 550px;
+  width: 640px;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 7px 5px 28px rgba(0, 0, 0, 0.1);
@@ -45,4 +58,34 @@ html {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.header-content .text-content {
+  padding: 2rem 3.5rem;
+  margin: 1.2rem;
+  color: var(--secondary-color);
+  width: 80%;
+}
+
+.header-content .text-content h1 {
+  font-size: 3.5rem;
+  color: #6462d6;
+  position: relative;
+  line-height: 3.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-content .text-content h1::before {
+  content: '';
+  background-color: #6462d6;
+  position: absolute;
+  top: 25%;
+  left: -6%;
+  height: 5px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.header-content .text-content h1 span {
+  color: var(--secondary-color);
 }
