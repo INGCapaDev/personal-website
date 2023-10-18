@@ -40,6 +40,9 @@ body::-webkit-scrollbar-thumb {
 .hero-header {
   min-height: 100vh;
   background-color: var(--primary-color);
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .container {
@@ -47,9 +50,9 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
 }
 
-.toggle {
-  position: fixed;
-  right: 4%;
+.toggle, .language {
+  position: absolute;
+  right: 3.5rem;
   top: 5%;
   color: #fff;
   height: 50px;
@@ -58,6 +61,17 @@ body::-webkit-scrollbar-thumb {
   background-color: #2b2a2a;
   border-radius: 50%;
   text-align: center;
+  transition: 0.5s;
+}
+
+.language {
+  right: 8rem;
+}
+
+.toggle:hover, .language:hover {
+  background-color: #6462d6;
+  color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .header-content {
@@ -89,14 +103,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header-content .text-content p {
-  text-align: justify;
+  text-wrap: balance;
+  padding-bottom: 1rem;
 }
 
 .header-content .text-content h1 {
   font-size: 3.5rem;
   color: #6462d6;
   position: relative;
-  line-height: 3.6rem;
+  line-height: 4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -121,7 +136,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--secondary-color);
 }
 
-.navigation .nav a i {
+.navigation .nav a i, .language i {
   height: 50px;
   width: 50px;
   line-height: 50px;
@@ -132,7 +147,20 @@ body::-webkit-scrollbar-thumb {
   transition: 0.5s;
 }
 
-.navigation .nav a:hover i {
+.navigation .nav a:hover i, .language i:hover {
+  background-color: #6462d6;
+  color: var(--secondary-color);
+}
+
+.language a {
+  text-decoration: none;
+}
+
+.language a:visited {
+  color: var(--secondary-color);
+}
+
+.toggle:hover {
   background-color: #6462d6;
   color: var(--secondary-color);
 }
@@ -176,9 +204,17 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
 @media (max-width: 1200px) {
   .header-content {
     flex-direction: column;
+    justify-content: center;
   }
 
   .header-content .profile {
@@ -187,6 +223,8 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50%;
     margin-top: 2rem;
   }
+
+  
 
   .header-content .profile .img {
     width: 100%;
@@ -214,6 +252,11 @@ body::-webkit-scrollbar-thumb {
     padding: 0.3rem;
     margin: auto;
   }
+
+  .language {
+    left: 5%;
+    top: 5%
+  }
 }
 
 @media (max-width: 768px) {
@@ -237,5 +280,53 @@ body::-webkit-scrollbar-thumb {
   .header-content .text-content h1 {
     font-size: 2rem;
     line-height: 1.7rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .header-content .button  {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .language {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .toggle {
+    right: 1rem;
+    top: 1rem;
+  }
+  
+  .header-content .button {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .header-content .button-container {
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+  }
+  .header-content .text-content  {
+    padding: 0 1.2rem;
+  }
+  .header-content .text-content h1 {
+    line-height: 2.5rem;
+  }
+  .header-content .text-content p {
+    text-align: center;
+  }
+  
+  .header-content .text-content h1 span {
+    color: var(--secondary-color);
   }
 }
